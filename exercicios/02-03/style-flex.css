@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    width: 80%;
+    height: 300px;
+    border: solid 3px black;
+    margin: auto; /*vai pegar os 20% que sobrou e vai deixar no centro*/ 
+    /* align-items: center; */
+}
+.bolinha{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: aqua;
+}
