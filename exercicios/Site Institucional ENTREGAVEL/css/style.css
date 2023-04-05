@@ -1,0 +1,103 @@
+/*space-around: espaçamento igual entre os elementos: -E--E--E-
+space-between: Separa os elementos nas suas extremidades
+space-evenly: mesmo espaçamento entre os elements -E-E-E-*/
+
+
+*{
+    font-family: Arial;
+}
+
+/* Começo Menu */
+a{
+    font-style: none;
+}
+body{
+    margin: 0;
+}
+.header{
+    width: 100%;
+    background-color: black;
+    border-bottom: solid 3px #32a7b1;
+}
+.header h1{
+    color: #32a7b1;
+}
+.header .container{
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.navBar{
+    color: #b58d5b;
+    list-style: none;
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+li{
+    transition: all 0.5s;
+}
+li:hover{
+    transform: scale(1.2);
+}
+
+/*Começo do Banner*/
+.banner{
+    width: 100%;
+    height: 450px;
+    background-image: url(../img/fundo.png);
+}
+.banner .container{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.banner .container p{
+    font-size: 30px;
+    color: white;
+    width: 230px;
+}
+p span{
+    font-weight: 800;
+}
+
+/* Começo do Social */
+.social{
+    width: 100%;
+    background-color: #cdcdcd;
+}
+.social img{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social .container{
+    justify-content: space-around;
+    padding: 15px;
+}
+.card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 5px;
+}
+.card h1{
+    color: #d62e71;
+}
+
+/* Começo do Footer */
+.footer{
+    width: 100%;
+    background-color: #32a7b1;
+    color: white;
+}
+.footer .container{
+    display: flex;
+    justify-content: center;
+}

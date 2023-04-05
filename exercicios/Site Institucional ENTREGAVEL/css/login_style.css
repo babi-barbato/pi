@@ -1,0 +1,39 @@
+.footer{
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    background-color: #cdcdcd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 60px;
+    border-radius: 20px;
+    color: #d31d5a;
+}
+.label{
+    margin: 0;
+    font-size: 20px;
+}
+h2{
+    font-size: 33px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+input{
+    border: solid 2px #32a7b1;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+button{
+    background-color: #d31d5a;
+    color: white;
+    border: 0;
+    height: 30px;
+    border-radius: 20px;
+}

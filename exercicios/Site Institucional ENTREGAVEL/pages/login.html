@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login_style.css">
+    <link rel="shortcut icon" href="../img/favicon2.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body>
+    <!-- Começo do Header -->
+    <div class="header">
+        <div class="container">
+            <h1>Aquatech</h1>
+            <ul class="navBar">
+                <li><a href="../index.html">Inicial</a></li>
+                <li>Simulador</li>
+                <li>|</li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do Header -->
+
+    <!-- Começo do Banner -->
+    <div class="banner">
+        <div class="container">
+            <div class="form">
+                <h2>Ola de volta!</h2>
+                <h1 class="label">E-mail:</h1>
+                <input id="iptEmail" placeholder="E-mail">
+                <h1 class="label">Senha:</h1>
+                <input id="iptSenha" type="password" placeholder="*****">
+                <button onclick="entrar()">Entrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do Banner -->
+
+    <!-- Começo do footer -->
+    <div class="footer">
+        <div class="container">
+            <p>Feito com amor por um aluno Sptech &hearts; 2023</p>
+        </div>
+    </div>
+    <!-- Fim do Footer -->
+
+</body>
+</html>
+<script>
+    function entrar(){
+        var senha = iptSenha.value;
+        var email = iptEmail.value;
+        var cont = 0;
+
+        if(email == "" || senha == ""){
+            alert("Preencha todos os campos");
+            cont ++;
+        }
+
+        if(email.indexOf("@") == -1){
+            alert("Coloque um E-mail VÁLIDO!");
+            iptEmail.value = "";
+            cont ++;
+        }
+
+        if(cont == 0){
+            alert("Logado com sucesso");
+            iptEmail.value = "";
+            iptSenha.value = "";
+        }
+    }
+</script>

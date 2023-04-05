@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cadastro_style.css">
+    <link rel="shortcut icon" href="../img/favicon2.ico" type="image/x-icon">
+    <title>Cadastro</title>
+</head>
+<body>
+    <!-- Começo do Header -->
+    <div class="header">
+        <div class="container">
+            <h1>Aquatech</h1>
+            <ul class="navBar">
+                <li><a href="../index.html">Inicial</a></li>
+                <li>Simulador</li>
+                <li>|</li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do Header -->
+
+    <!-- Começo do Banner -->
+    <div class="banner">
+        <div class="container">
+            <div class="form">
+                <h2>Bem-vindo!</h2>
+                <h1 class="label">Nome:</h1>
+                <input id="iptNome" placeholder="Seu nome">
+                <h1 class="label">E-mail:</h1>
+                <input id="iptEmail" placeholder="E-mail">
+                <h1 class="label">Senha:</h1>
+                <input id="iptSenha" type="password" placeholder="*****">
+                <h1 class="label">Confirmação da Senha:</h1>
+                <input id="iptConfSenha" type="password" placeholder="*****">
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do Banner -->
+
+    <!-- Começo do footer -->
+    <div class="footer">
+        <div class="container">
+            <p>Feito com amor por um aluno Sptech &hearts; 2023</p>
+        </div>
+    </div>
+    <!-- Fim do Footer -->
+
+</body>
+</html>
+<script>
+    function cadastrar(){
+        //cor padrão da borda
+        iptConfSenha.style.border = "solid 2px #32a7b1";
+        iptSenha.style.border = "solid 2px #32a7b1";
+        iptEmail.style.border = "solid 2px #32a7b1";
+        iptNome.style.border = "solid 2px #32a7b1";
+        
+        //declaração de variaveis
+        var senha = iptSenha.value;
+        var confSenha = iptConfSenha.value;
+        var email = iptEmail.value;
+        var nome = iptNome.value;
+        var cont = 0;
+        
+        //verificação se todos os campos foram preenchidos
+        if (nome == ""){//verifica se o nome foi preenchido
+            alert("Preencha o campo do nome");
+            iptNome.style.border = "solid 2px red"
+            cont ++;
+        }
+        if(email == "" ){//verifica se o email foi preenchido
+            alert("Preencha o campo de E-mail");
+            iptEmail.style.border = "solid 2px red"
+            cont ++;
+        }
+        if (senha == ""){//verifica se a senha foi preenchida
+            alert("Preencha o campo de senha");
+            iptSenha.style.border = "solid 2px red"
+            cont ++;
+        }
+        if (confSenha == ""){//verifica se a conf senha foi preenchida
+            alert("Preencha o campo de confirmação de senha");
+            iptConfSenha.style.border = "solid 2px red"
+            cont ++;
+        }
+
+        //verifica se o campo email tem @
+        if(email.indexOf("@") == -1){
+            alert("Coloque um E-mail VÁLIDO!");
+            iptEmail.value = "";
+            iptEmail.style.border = "solid 2px red"
+            cont ++;
+        }
+        
+        //verifica se as senhas são iguais
+        if(senha != confSenha){
+            alert("As senhas devem ser iguais!");
+            iptSenha.value = "";
+            iptConfSenha.value = "";
+            iptSenha.style.border = "solid 2px red"
+            iptConfSenha.style.border = "solid 2px red"
+            cont ++;
+        }
+        
+        //se td foi preenchido corretamente o cont continua em 0
+        if(cont == 0){
+            alert("Cadastro realizado com sucesso!");
+            iptEmail.value = "";
+            iptNome.value = "";
+            iptSenha.value = "";
+            iptConfSenha.value = "";
+        }
+    }
+</script>
